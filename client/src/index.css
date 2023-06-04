@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+}
+
+h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
