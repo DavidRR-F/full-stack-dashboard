@@ -1,11 +1,11 @@
 import React from "react"
+import { styled } from "@mui/material"
+import { Box } from "@mui/system"
 
-const FlexBetween = ({ children, style }) => {
-  return (
-    <div className={`flex justify-between items-center ${style}`}>
-      {children}
-    </div>
-  )
-}
+const FlexBetween = styled(Box)({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+})
 
 export default FlexBetween

@@ -9,7 +9,6 @@ import {
 } from "@mui/icons-material"
 import profileImage from "../assets/skyrim_dragon_skull_head.jpeg"
 import FlexBetween from "./FlexBetween"
-import nightwind from "nightwind/helper"
 import { setMode } from "../state"
 import { useDispatch } from "react-redux"
 
@@ -17,8 +16,14 @@ const Navbar = () => {
   const dispatch = useDispatch()
   const theme = useTheme()
   return (
-    <AppBar className="static bg-none shadow-none">
-      <Toolbar className="flex justify-between w-full">
+    <AppBar
+      sx={{
+        position: "static",
+        background: "none",
+        boxShadow: "none",
+      }}
+    >
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left Side */}
         <FlexBetween>
           <IconButton
@@ -28,7 +33,12 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <FlexBetween style="bg-background-alt rounded-lg gap-12 pl-3 pr-3">
+          <FlexBetween
+            backgroundColor={theme.palette.background.alt}
+            borderRadius="9px"
+            gap="3rem"
+            p="0.1rem 1.5rem"
+          >
             <InputBase placeholder="Search..." />
             <IconButton>
               <Search />
