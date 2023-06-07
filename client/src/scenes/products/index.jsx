@@ -131,7 +131,9 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <CircularProgress />
+        <div className="flex justify-center items-center w-full h-full">
+          <CircularProgress />
+        </div>
       )}
     </Box>
   )
