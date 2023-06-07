@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
+  screenSize: null,
+  isBelowThreshold: false,
   mode: "dark",
   userId: "63701cc1f03239b7f700000e",
 }
@@ -12,9 +14,13 @@ export const globalSlice = createSlice({
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light"
     },
+    setScreenSize: (state, action) => {
+      state.screenSize = action.payload
+      state.isBelowThreshold = action.payload < 600
+    },
   },
 })
 
-export const { setMode } = globalSlice.actions
+export const { setMode, setScreenSize } = globalSlice.actions
 
 export default globalSlice.reducer

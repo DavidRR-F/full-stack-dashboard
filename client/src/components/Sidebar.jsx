@@ -97,7 +97,7 @@ const Sidebar = ({
   drawerWidth,
   isSidebarOpen,
   setIsSidebarOpen,
-  isNonMobile,
+  isMobile,
 }) => {
   const { pathname } = useLocation()
   const [active, setActive] = useState("")
@@ -134,7 +134,7 @@ const Sidebar = ({
                     ECOMVISION
                   </Typography>
                 </Box>
-                {!isNonMobile && (
+                {isMobile && (
                   <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     <ChevronLeft />
                   </IconButton>
