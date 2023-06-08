@@ -129,9 +129,6 @@ const Sidebar = ({
               }),
             },
           }}
-          // classes={{
-          //   paper: `${classes.drawer}`,
-          // }}
         >
           <Box width="100%">
             <Box m="1.5rem 2rem 2rem 3rem">
