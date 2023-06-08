@@ -17,6 +17,7 @@ import {
   Search,
   SettingsOutlined,
   Menu as MenuIcon,
+  Close as CloseIcon,
   ArrowDropDownOutlined,
 } from "@mui/icons-material"
 import profileImage from "../assets/skyrim_dragon_skull_head.jpeg"
@@ -45,7 +46,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
         {/* Left Side */}
         <FlexBetween>
           <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-            <MenuIcon />
+            {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
           <FlexBetween
             backgroundColor={theme.palette.background.alt}

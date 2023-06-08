@@ -123,8 +123,15 @@ const Sidebar = ({
               backgroundColor: theme.palette.background.alt,
               boxSixing: "border-box",
               width: drawerWidth,
+              transition: theme.transitions.create("width", {
+                easing: theme.transitions.easing.sharp,
+                duration: theme.transitions.duration.leavingScreen,
+              }),
             },
           }}
+          // classes={{
+          //   paper: `${classes.drawer}`,
+          // }}
         >
           <Box width="100%">
             <Box m="1.5rem 2rem 2rem 3rem">

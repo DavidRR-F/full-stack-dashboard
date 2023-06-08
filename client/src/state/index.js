@@ -16,7 +16,7 @@ export const globalSlice = createSlice({
     },
     setScreenSize: (state, action) => {
       state.screenSize = action.payload
-      state.isBelowThreshold = action.payload < 600
+      state.isBelowThreshold = action.payload < 800
     },
   },
 })

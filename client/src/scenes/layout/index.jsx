@@ -28,6 +28,14 @@ const Layout = () => {
     }
   }, [dispatch])
 
+  useEffect(() => {
+    if (isMobile) {
+      setIsSidebarOpen(false)
+    } else {
+      setIsSidebarOpen(true)
+    }
+  }, [isMobile])
+
   return (
     <Box
       display={isMobile ? "block" : "flex"}
