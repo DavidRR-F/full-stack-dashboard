@@ -6,6 +6,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "800px",
+      },
       flex: {
         between: "flex justify-between align-center",
       },

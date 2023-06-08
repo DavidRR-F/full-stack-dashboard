@@ -37,12 +37,7 @@ const Layout = () => {
   }, [isMobile])
 
   return (
-    <Box
-      display={isMobile ? "block" : "flex"}
-      width="100%"
-      height="100%"
-      boxSizing="border-box"
-    >
+    <div className="sm:flex block w-full h-full">
       <Sidebar
         user={data || {}}
         isMobile={isMobile}
@@ -50,15 +45,15 @@ const Layout = () => {
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <Box flexGrow={1}>
+      <div className="grid-flow-col w-full">
         <Navbar
           user={data || {}}
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
         <Outlet />
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

@@ -8,7 +8,6 @@ body,
 #root,
 .app {
   height: 100%;
-  width: 100%;
   font-family: "Inter", sans-serif;
 }
 
@@ -64,4 +63,9 @@ h6 {
 /* Handle on Hover */
 ::-webkit-scrollbar-track:hover {
   background: #21295c;
+}
+
+rect,
+svg {
+  width: 100%;
 }
