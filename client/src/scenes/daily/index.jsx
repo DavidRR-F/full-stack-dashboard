@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from "react"
-import { Box, CircularProgress, useTheme } from "@mui/material"
+import { Box, useTheme } from "@mui/material"
 import Header from "../../components/Header"
 import { ResponsiveLine } from "@nivo/line"
 import { useGetSalesQuery } from "../../state/api"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
+import LoadingSpinner from "../../components/LoadingSpinner"
 
 const Daily = () => {
   const [startDate, setStartDate] = useState(new Date("2021-02-01"))
@@ -177,7 +178,7 @@ const Daily = () => {
             ]}
           />
         ) : (
-          <CircularProgress />
+          <LoadingSpinner />
         )}
       </Box>
     </Box>

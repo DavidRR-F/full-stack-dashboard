@@ -1,9 +1,10 @@
 import React from "react"
-import { Box, CircularProgress, useTheme } from "@mui/material"
+import { Box, useTheme } from "@mui/material"
 import { useGetGeographyQuery } from "../../state/api"
 import Header from "../../components/Header"
 import { ResponsiveChoropleth } from "@nivo/geo"
 import { geoData } from "../../state/geoData"
+import LoadingSpinner from "../../components/LoadingSpinner"
 
 const Geography = () => {
   const theme = useTheme()
@@ -92,9 +93,7 @@ const Geography = () => {
             ]}
           />
         ) : (
-          <div className="flex justify-center items-center w-full h-full">
-            <CircularProgress />
-          </div>
+          <LoadingSpinner />
         )}
       </Box>
     </Box>

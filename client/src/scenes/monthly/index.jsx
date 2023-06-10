@@ -1,8 +1,9 @@
 import React, { useMemo } from "react"
-import { Box, CircularProgress, useTheme } from "@mui/material"
+import { Box, useTheme } from "@mui/material"
 import Header from "../../components/Header"
 import { ResponsiveLine } from "@nivo/line"
 import { useGetSalesQuery } from "../../state/api"
+import LoadingSpinner from "../../components/LoadingSpinner"
 
 const Monthly = () => {
   const { data } = useGetSalesQuery()
@@ -146,7 +147,7 @@ const Monthly = () => {
             ]}
           />
         ) : (
-          <CircularProgress />
+          <LoadingSpinner />
         )}
       </Box>
     </Box>

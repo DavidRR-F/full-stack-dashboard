@@ -10,10 +10,10 @@ import {
   Rating,
   useTheme,
   useMediaQuery,
-  CircularProgress,
 } from "@mui/material"
 import Header from "../../components/Header"
 import { useGetProductsQuery } from "../../state/api"
+import LoadingSpinner from "../../components/LoadingSpinner"
 
 const Product = ({
   _id,
@@ -131,9 +131,7 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <div className="flex justify-center items-center w-full h-full">
-          <CircularProgress />
-        </div>
+        <LoadingSpinner />
       )}
     </Box>
   )

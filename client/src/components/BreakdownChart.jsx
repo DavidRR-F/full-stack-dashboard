@@ -1,13 +1,14 @@
 import React from "react"
 import { ResponsivePie } from "@nivo/pie"
-import { Box, CircularProgress, Typography, useTheme } from "@mui/material"
+import { Box, Typography, useTheme } from "@mui/material"
 import { useGetSalesQuery } from "../state/api"
+import LoadingSpinner from "./LoadingSpinner"
 
 const BreakdownChart = ({ isDashboard = false }) => {
   const { data, isLoading } = useGetSalesQuery()
   const theme = useTheme()
 
-  if (!data || isLoading) return <CircularProgress />
+  if (!data || isLoading) return <LoadingSpinner />
 
   const colors = [
     theme.palette.secondary[500],
